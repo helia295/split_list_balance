@@ -4,20 +4,20 @@
 using namespace std;
 
 //This recursive function will calculate base^exp and return the result
-int pow(int base, int exp) {
+unsigned long long pow(long long base, long long exp) {
 	
 	if (base < 0) {
 		cout << "Invalid base! Only take positive integer." << endl;
 		exit(1);
 	}
 	
-	if (exp == 0) {
+	if (exp == 0) { 	//base case 1
 		return 1;
 		
-	} else if (exp == 1) { 
+	} else if (exp == 1) { 		//base case 2
 		return base;
 		
-	} else if (exp > 1) {
+	} else if (exp > 1) { 		//recursion
 		return (base * pow(base, exp - 1));
 		
 	} else { 	//if exp < 0
@@ -27,9 +27,9 @@ int pow(int base, int exp) {
 }	
 
 //This function will calculate the sum of all the digits in num
-int sum(int num) {
+unsigned long long sum(unsigned long long num) {
 	
-	int result = 0;
+	unsigned long long result = 0;
 	
 	while (num != 0) {
 		result += num % 10;	//modulus 10 will get the last digit of the number
@@ -41,10 +41,10 @@ int sum(int num) {
 
 int main() {
 	
-	int base;
-	int exp;
-	int power;
-	int sumDigits;
+	long long base;
+	long long exp;
+	unsigned long long power;
+	unsigned long long sumDigits;
 	
 	cout << "base: ";
 	cin >> base;
