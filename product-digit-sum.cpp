@@ -54,7 +54,7 @@ unsigned int sum_vector(vector<int> numVector) {
 	
 	unsigned int result = 0;
 	
-	for (int i = 0; i < numVector.size(); ++i) {
+	for (unsigned int i = 0; i < numVector.size(); ++i) {
 		result += numVector.at(i);
 	}
 	
@@ -66,7 +66,7 @@ string vec_to_string(vector<int> numVector) {
 	
 	string vecString = "[";
 	
-	for (int i = 0; i < numVector.size()-1; ++i) {
+	for (unsigned int i = 0; i < numVector.size()-1; ++i) {
 		//to_string() turns int into string -- from <string>
 		vecString += to_string(numVector.at(i)) + ", ";
 	}
