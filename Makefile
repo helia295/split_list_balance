@@ -1,5 +1,5 @@
 all:
-	g++ -Wall product-digit-sum.cpp -o pds
+	g++ -Wall -g product-digit-sum.cpp -o pds
 	
 run:
 	./pds
