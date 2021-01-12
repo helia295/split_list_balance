@@ -36,10 +36,16 @@ vector<int> vectorize_digits(unsigned long long num) {
 	
 	vector<int> digitsVector;
 	
-	while (num != 0) {
-		digitsVector.push_back(num % 10);	//modulus 10 will get the last digit of the number
-		num /= 10;	//integer division will eliminate everything after the decimal point
-	}	
+	if (num == 0) {
+		digitsVector.push_back(num);
+	} else {
+	
+		while (num != 0) {
+			digitsVector.push_back(num % 10);	//modulus 10 will get the last digit of the number
+			num /= 10;	//integer division will eliminate everything after the decimal point
+
+		}	
+	}
 	
 	//reverse() will return the reversed vector -- from <algorithm>
 	//begin() will return an iterator pointing to the first element -- from <vector>
